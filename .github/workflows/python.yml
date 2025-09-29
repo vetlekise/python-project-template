@@ -1,10 +1,23 @@
-name: Python CI
+name: Python
 
+# In .github/workflows/ci.yml
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
+    paths:
+      - "src/**"
+      - "tests/**"
+      - "pyproject.toml"
+      - ".github/workflows/ci.yml"
   pull_request:
-
+    types: [opened, synchronize]
+    branches: ["main"]
+    paths:
+      - "src/**"
+      - "tests/**"
+      - "pyproject.toml"
+      - ".github/workflows/ci.yml"
+      
 jobs:
   build:
     runs-on: ubuntu-latest

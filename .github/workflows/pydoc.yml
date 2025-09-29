@@ -2,9 +2,15 @@ name: API Documentation
 
 on:
   push:
-    branches:
-      - main
-
+    branches: ["main"]
+    paths:
+      - "src/**"
+  pull_request:
+    types: [opened, synchronize]
+    branches: ["main"]
+    paths:
+      - "src/**"
+      
 # This job needs permission to write to the repository to commit the updated docs.
 permissions:
   contents: write

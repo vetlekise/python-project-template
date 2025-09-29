@@ -2,14 +2,10 @@ name: Release Drafter
 
 on:
   push:
-    branches:
-      - main
-  # The pull_request event is required for the autolabeler feature.
-  # If you want the autolabeler to work with PRs from forks, use pull_request_target.
+    branches: ["main"]
   pull_request:
     types: [opened, synchronize]
-  # pull_request_target:
-  #   types: [opened, reopened, synchronize]
+    branches: ["main"]
 
 permissions:
   contents: read
