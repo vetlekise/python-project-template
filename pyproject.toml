@@ -34,6 +34,7 @@ dev = [
     "pytest",
     "mypy",
     "pre-commit",
+    "pydoc-markdown"
 ]
 
 # This section configures the build tool, setuptools.
