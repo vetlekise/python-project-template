@@ -44,6 +44,11 @@ pip install -e .[dev]
 ## Writing Documentation
 This project uses [MkDocs](https://github.com/mkdocs/mkdocs) with the [mkdocstrings](https://github.com/mkdocstrings/mkdocstrings?tab=coc-ov-file) plugin to build a full documentation website from your Markdown files and Python docstrings. Its configuration is stored in `mkdocs.yml`.
 
+### Documentation Structure
+The `docs/` directory contains the source files for your documentation website.
+- `index.md`: This is the homepage of your documentation site. You should edit this file to provide a general introduction to your project.
+- `reference.md`: This file is used to generate the API reference. The `::: your_project_name` marker inside it is automatically replaced by `mkdocstrings` with the documentation generated from your code's docstrings.
+
 ### Docstring Format
 The recommended format for docstrings is the **Google Python Style Guide**. Use sections like `Args`:, `Returns`:, and `Raises`: to ensure your docstrings are parsed correctly.
 
