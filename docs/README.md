@@ -80,7 +80,10 @@ mkdocs serve
 This will start a local web server, and you can view your site at `http://127.0.0.1:8000`. The site will automatically reload when you save changes.
 
 ## Documentation Deployment to GitHub Pages
-The workflow in `.github/workflows/docs.yml` automatically builds and deploys your documentation website to GitHub Pages. To enable the workflow, add the file extension `.yml` to the file.
+The workflow in `.github/workflows/docs.yml` automatically builds and deploys your documentation website. 
+
+> [!NOTE]
+> To enable the workflow, add the file extension `.yml` to the file.
 
 For this to work, you must perform a **one-time setup** in your repository settings:
 1. Navigate to your repository's **Settings** tab.
