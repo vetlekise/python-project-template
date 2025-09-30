@@ -44,11 +44,10 @@ pip install -e .[dev]
 ## Writing Documentation
 This project uses [MkDocs](https://github.com/mkdocs/mkdocs) with the [mkdocstrings](https://github.com/mkdocstrings/mkdocstrings?tab=coc-ov-file) plugin to build a full documentation website from your Markdown files and Python docstrings. Its configuration is stored in `mkdocs.yml`.
 
+### Docstring Format
 The recommended format for docstrings is the **Google Python Style Guide**. Use sections like `Args`:, `Returns`:, and `Raises`: to ensure your docstrings are parsed correctly.
 
-### Docstring Format
 Here is an example of a well-documented function:
-
 ```python
 def connect_to_api(api_key: str, endpoint: str, timeout: int = 10) -> dict:
     """Connects to an API endpoint and returns the JSON response.
