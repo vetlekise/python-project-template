@@ -1,2 +1,4 @@
-# python-project-template
-A Python project template featuring pipelines for automated documentation, code checks, and releases.
+# [Project Name]
+
+> [!NOTE]
+> *Example: A Python [package/library] for [describe the primary action, e.g., interacting with the X API, analyzing Y data].*
