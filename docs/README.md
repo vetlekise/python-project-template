@@ -27,7 +27,7 @@ The standard framework for writing and running tests in Python. It's used to ver
 A framework for managing and maintaining multi-language pre-commit hooks. It runs checks on your code before you commit, helping to enforce code quality and catch issues early. The configuration is in `.pre-commit-config.yaml`.
 
 ### [Release Drafter](https://github.com/release-drafter/release-drafter)
-Automates the creation of draft release notes for your GitHub releases based on merged pull requests. Its configuration and workflow are in `.github/release-drafter.yml`.
+Automates the creation of draft release notes for your GitHub releases based on merged pull requests. Its configuration and workflow are in the `.github` directory.
 
 ## Local Development Usage
 ### Install Dependencies
