@@ -1,0 +1,14 @@
+site_name: "[Project Name]"
+theme:
+  name: material
+repo_url: https://github.com/YOUR_USERNAME/YOUR_REPOSITORY
+nav:
+  - Home: index.md
+  - API Reference: reference.md
+
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_root_heading: yes
