@@ -1,48 +1,42 @@
 # Information
-This document provides an overview of this docs directory and the template's development tooling.
+This document provides an overview of this docs directory and the development tooling.
 
 ## File Structure
 | File | Description |
 |--|--|
-| [docs](./docs) | Additional documentation, images for README.md and more. |
+| [docs](./docs) | Contains project documentation, such as this file. |
 | [src](./src) | Contains your actual Python package source code. |
 | [tests](./tests) | Contains all your tests, separate from the main source. |
-| [pyproject.toml](./pyproject.toml) | The central configuration file. It defines project metadata, dependencies, and settings for tools like linters and formatters. |
+| [pyproject.toml](./pyproject.toml) | The central configuration file. Defines project metadata, dependencies, and all tool settings. |
+| [.github/workflows](./.github/workflows) | Contains all GitHub Actions workflows for CI/CD and automation. |
 
-## Dependencies
-### [Release Drafter](https://github.com/release-drafter/release-drafter)
-Automates the creation of draft release notes for your GitHub releases based on merged pull requests.
+## Development Tooling
+> [!NOTE]
+> Most tools are configured within the `pyproject.toml` file.
 
-#### Location
-| File | Description |
-|--|--|
-| [.github/workflows/release-drafter.yml](./.github/workflows/release-drafter.yml) | Contains the workflow that runs Release Drafter. |
-| [.github/release-drafter.yml](./.github/release-drafter.yml) | Contains the configuration of Release Drafter. |
+### [Ruff](https://github.com/astral-sh/ruff)
+A Python linter and code formatter, used to enforce a consistent code style and catch common errors.
 
-### Linting & Security Scanning: [Checkov](https://github.com/bridgecrewio/checkov)
-These tools help ensure your Terraform code is valid, follows best practices, and is free from common security vulnerabilities.
-* **Checkov**: A static code analysis tool for IaC to find misconfigurations that may lead to security or compliance problems.
+### [Mypy](https://github.com/python/mypy)
+A static type checker for Python. Mypy analyzes your type hints to help you find bugs before you even run your code.
 
-#### Location
-| File | Description |
-|--|--|
-| [.github/workflows/terraform-linter.yml](./.github/workflows/terraform-docs.yml) | Contains the workflow that runs TFLint, Trivy & Checkov. |
-| [.checkov.yaml](./.checkov.yaml) | Contains the configuration of Chekov. |
+### [Pytest](https://github.com/pytest-dev/pytest)
+The standard framework for writing and running tests in Python. It's used to verify that your code works as expected. All tests should be created in the `tests` directory.
 
 ### [Pre-commit](https://github.com/pre-commit/pre-commit)
-A framework for managing and maintaining multi-language pre-commit hooks. It runs checks on your code before you commit, helping to enforce code quality and catch issues early.
+A framework for managing and maintaining multi-language pre-commit hooks. It runs checks on your code before you commit, helping to enforce code quality and catch issues early. The configuration is in `.pre-commit-config.yaml`.
 
-#### Location
-| File | Description |
-|--|--|
-| [.pre-commit-config.yaml](./.pre-commit-config.yaml) | Contains the configuration of pre-commit. |
+### [Release Drafter](https://github.com/release-drafter/release-drafter)
+Automates the creation of draft release notes for your GitHub releases based on merged pull requests. Its configuration and workflow are in `.github/release-drafter.yml`.
 
-#### Usage
-First, install dependencies:
+## Local Development Usage
+### Install Dependencies
+To get started, install the project and all the development tools:
 ```bash
+pip install .[dev]
 ```
 
-1. Install git hooks: `pre-commit install`
-1. Manually run all files: `pre-commit run --all-files`
-1. Manually run a specific hook: `pre-commit run <hook_id>`
-1. Skip hooks: `git commit --no-verify -m "Your commit message"`
+### Using Pre-commit
+- **Install git hooks**: `pre-commit install` (This only needs to be run once per project clone).
+- **Manually run on all files**: `pre-commit run --all-files`
+- **Skip hooks for a single commit**: `git commit --no-verify -m "Your commit message"`
