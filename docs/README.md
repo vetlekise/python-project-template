@@ -1,54 +1,14 @@
-# Information
-This document provides an overview of this docs directory and the development tooling.
+# Project Documentation Guide
+This document provides an overview of how documentation is structured, written, and deployed for this project.
 
-## File Structure
-| File | Description |
-|--|--|
-| [docs](./docs) | Contains project documentation, such as this file. |
-| [src](./src) | Contains your actual Python package source code. |
-| [tests](./tests) | Contains all your tests, separate from the main source. |
-| [pyproject.toml](./pyproject.toml) | The central configuration file. Defines project metadata, dependencies, and all tool settings. |
-| [.github/workflows](./.github/workflows) | Contains all GitHub Actions workflows for CI/CD and automation. |
+This project uses [MkDocs](https://github.com/mkdocs/mkdocs) with the [mkdocstrings](https://github.com/mkdocstrings/mkdocstrings?tab=coc-ov-file) plugin to build a full documentation website from your Markdown files and Python docstrings. The main configuration for the site is stored in the `mkdocs.yml` file in the project root.
 
-## Development Tooling
-> [!NOTE]
-> Most tools are configured within the `pyproject.toml` file.
-
-### [Ruff](https://github.com/astral-sh/ruff)
-A Python linter and code formatter, used to enforce a consistent code style and catch common errors.
-
-### [Mypy](https://github.com/python/mypy)
-A static type checker for Python. Mypy analyzes your type hints to help you find bugs before you even run your code.
-
-### [Pytest](https://github.com/pytest-dev/pytest)
-The standard framework for writing and running tests in Python. It's used to verify that your code works as expected. All tests should be created in the `tests` directory.
-
-### [Pre-commit](https://github.com/pre-commit/pre-commit)
-A framework for managing and maintaining multi-language pre-commit hooks. It runs checks on your code before you commit, helping to enforce code quality and catch issues early. The configuration is in `.pre-commit-config.yaml`.
-
-### [Release Drafter](https://github.com/release-drafter/release-drafter)
-Automates the creation of draft release notes for your GitHub releases based on merged pull requests. Its configuration and workflow are in the `.github` directory.
-
-## Local Development Usage
-### Install Dependencies
-To get started, install the project and all the development tools:
-```bash
-pip install -e .[dev]
-```
-
-### Using Pre-commit
-- **Install git hooks**: `pre-commit install` (This only needs to be run once per project clone).
-- **Manually run on all files**: `pre-commit run --all-files`
-- **Skip hooks for a single commit**: `git commit --no-verify -m "Your commit message"`
-
-## Writing Documentation
-This project uses [MkDocs](https://github.com/mkdocs/mkdocs) with the [mkdocstrings](https://github.com/mkdocstrings/mkdocstrings?tab=coc-ov-file) plugin to build a full documentation website from your Markdown files and Python docstrings. Its configuration is stored in `mkdocs.yml`.
-
-### Documentation Structure
+## Structure
 The `docs/` directory contains the source files for your documentation website.
 - `index.md`: This is the homepage of your documentation site. You should edit this file to provide a general introduction to your project.
-- `reference.md`: This file is used to generate the API reference. The `::: your_project_name` marker inside it is automatically replaced by `mkdocstrings` with the documentation generated from your code's docstrings.
+- `reference.md`: This file is used to generate the API reference. The `::: your_project_name` marker inside it is automatically replaced by `mkdocstrings` with the documentation generated from your code's docstrings. 
 
+## Writing Documentation
 ### Docstring Format
 The recommended format for docstrings is the **Google Python Style Guide**. Use sections like `Args`:, `Returns`:, and `Raises`: to ensure your docstrings are parsed correctly.
 
@@ -84,11 +44,11 @@ mkdocs serve
 
 This will start a local web server, and you can view your site at `http://127.0.0.1:8000`. The site will automatically reload when you save changes.
 
-## Documentation Deployment to GitHub Pages
+## Deployment to GitHub Pages
 The workflow in `.github/workflows/docs.yml` automatically builds and deploys your documentation website. 
 
 > [!NOTE]
-> To enable the workflow, add the file extension `.yml` to the file.
+> To enable the workflow, add the `.yml` file extension to the workflow file.
 
 For this to work, you must perform a **one-time setup** in your repository settings:
 1. Navigate to your repository's **Settings** tab.

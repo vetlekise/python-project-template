@@ -39,6 +39,9 @@ dev = [
     "mkdocstrings[python]"
 ]
 
+[project.scripts]
+your-command = "your_project_name.main:main"
+
 # This section configures the build tool, setuptools.
 [tool.setuptools]
 # This line is crucial for finding your package inside the src/ directory.
