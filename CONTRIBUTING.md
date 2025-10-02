@@ -25,7 +25,7 @@ pip install -e ".[dev]"
 ```
 
 ### Set Up Pre-commit Hooks
-This will install git hooks that automatically check your code for quality before you commit. This step only needs to be run once.
+This will install git hooks that automatically check your code for quality before you commit.
 
 ```bash
 pre-commit install
