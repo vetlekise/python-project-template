@@ -1,4 +1,35 @@
-# Contribute
+# Contributing
+
+## Local Development Setup
+> [!NOTE]
+> Most tools are configured within the `pyproject.toml` file.
+
+To get your development environment set up, follow these steps.
+
+### Fork and Clone the Repository
+First, fork the repository, then clone it to your local machine.
+
+### Create and Activate a Virtual Environment
+It's highly recommended to work in a virtual environment.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+### Install Development Dependencies
+This command installs the project in "editable" mode (`-e`) along with all the tools needed for testing and development (`[dev]`).
+
+```bash
+pip install -e ".[dev]"
+```
+
+### Set Up Pre-commit Hooks
+This will install git hooks that automatically check your code for quality before you commit. This step only needs to be run once.
+
+```bash
+pre-commit install
+```
 
 ## Issues
 Before starting work, search existing issues. If your contribution isn't covered, open a new issue. Describe the bug (with steps to reproduce) or proposed feature/enhancement.
