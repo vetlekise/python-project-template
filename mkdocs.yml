@@ -17,12 +17,12 @@ nav:
     - Overview: index.md
     - Code of Conduct: CODE_OF_CONDUCT.md
     - Security: SECURITY.md
-    - License: license/index.md
-  - Usage: 
+    - License: mit/index.md
+  - Usage:
     - usage/index.md
-  - Development: 
+  - Development:
     - Contributing: CONTRIBUTING.md
-  - API Reference: 
+  - API Reference:
     - api-reference/index.md
   - Documentation:
     - documentation/index.md
