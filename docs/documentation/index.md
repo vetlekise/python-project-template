@@ -1,4 +1,9 @@
-# Project Documentation Guide
+---
+title: Documentation
+hide:
+- navigation
+---
+
 This document provides an overview of how documentation is structured, written, and deployed for this project.
 
 This project uses [MkDocs](https://github.com/mkdocs/mkdocs) with the [mkdocstrings](https://github.com/mkdocstrings/mkdocstrings?tab=coc-ov-file) plugin to build a full documentation website from your Markdown files and Python docstrings. The main configuration for the site is stored in the `mkdocs.yml` file in the project root.

@@ -1,3 +1,9 @@
+---
+title: Contributing
+hide:
+- navigation
+---
+
 # Contributing
 
 ## Local Development Setup

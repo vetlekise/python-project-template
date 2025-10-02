@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 # The project section contains the core metadata for your package.
 # This information is used by packaging tools and displayed on PyPI.
 [project]
-name = "your-project-name"
+name = "project_name"
 version = "0.1.0"
 authors = [
   { name="Your Name", email="your@email.com" },
@@ -36,11 +36,12 @@ dev = [
     "pre-commit",
     "mkdocs",
     "mkdocs-material",
-    "mkdocstrings[python]"
+    "mkdocstrings[python]",
+    "mkdocs-callouts"
 ]
 
 [project.scripts]
-your-command = "your_project_name.main:main"
+main = "project_name.main:run_app"
 
 # This section configures the build tool, setuptools.
 [tool.setuptools]
