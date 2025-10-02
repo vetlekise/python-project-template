@@ -1,5 +1,9 @@
-API Reference
+---
+title: API Reference
+hide:
+- navigation
+---
 
 This page contains the auto-generated API reference documentation.
 
-::: your_project_name
+::: project_name
