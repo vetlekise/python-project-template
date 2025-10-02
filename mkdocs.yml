@@ -4,7 +4,7 @@ site_url: "https://domain.tld"
 repo_url: https://github.com/[USERNAME]/[REPO]
 repo_name: '[USERNAME]/[REPO]'
 copyright: '0000, Your Name'
-watch: [src/project_name, mkdocs.yml, README.md, docs/CONTRIBUTING.md, docs/SECURITY.md, docs/CODE_OF_CONDUCT.md, docs/license.md]
+watch: [src/project_name, mkdocs.yml, README.md, docs/CONTRIBUTING.md, docs/SECURITY.md, docs/CODE_OF_CONDUCT.md]
 edit_uri: edit/main/docs/
 
 validation:
@@ -17,7 +17,7 @@ nav:
     - Overview: index.md
     - Code of Conduct: CODE_OF_CONDUCT.md
     - Security: SECURITY.md
-    - License: license.md
+    - License: license/index.md
   - Usage: 
     - usage/index.md
   - Development: 
