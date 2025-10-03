@@ -1,8 +1,4 @@
----
-title: Documentation
-hide:
-- navigation
----
+# Documentation
 
 This document provides an overview of how documentation is structured, written, and deployed for this project.
 
@@ -11,7 +7,7 @@ This project uses [MkDocs](https://github.com/mkdocs/mkdocs) with the [mkdocstri
 ## Structure
 The `docs/` directory contains the source files for your documentation website.
 - `index.md`: This is the homepage of your documentation site. You should edit this file to provide a general introduction to your project.
-- `reference.md`: This file is used to generate the API reference. The `::: your_project_name` marker inside it is automatically replaced by `mkdocstrings` with the documentation generated from your code's docstrings. 
+- `reference.md`: This file is used to generate the API reference. The `::: your_project_name` marker inside it is automatically replaced by `mkdocstrings` with the documentation generated from your code's docstrings.
 
 ## Writing Documentation
 ### Docstring Format
@@ -50,7 +46,7 @@ mkdocs serve
 This will start a local web server, and you can view your site at `http://127.0.0.1:8000`. The site will automatically reload when you save changes.
 
 ## Deployment to GitHub Pages
-The workflow in `.github/workflows/docs.yml` automatically builds and deploys your documentation website. 
+The workflow in `.github/workflows/docs.yml` automatically builds and deploys your documentation website.
 
 > [!NOTE]
 > To enable the workflow, add the `.yml` file extension to the workflow file.
