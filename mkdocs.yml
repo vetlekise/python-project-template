@@ -24,8 +24,6 @@ nav:
     - Contributing: CONTRIBUTING.md
   - API Reference:
     - api-reference/index.md
-  - Documentation:
-    - documentation/index.md
 
 theme:
   name: material
