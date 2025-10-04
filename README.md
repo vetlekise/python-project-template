@@ -19,7 +19,7 @@ cd YOUR_REPOSITORY
 
 Install the package:
 ```
-pip install .
+pip3 install .
 ```
 
 ## Quick Usage
