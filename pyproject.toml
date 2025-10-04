@@ -41,7 +41,7 @@ dev = [
 ]
 
 [project.scripts]
-main = "project_name.main:run_app"
+project_name = "project_name.main:run_app"
 
 # This section configures the build tool, setuptools.
 [tool.setuptools]
