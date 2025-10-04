@@ -28,4 +28,4 @@ Simple usage example
 project_name
 ```
 
-For more usage examples, see the [usage](/docs/usage/index.md) page.
+For more usage examples, see the [usage](usage/index.md) page.
