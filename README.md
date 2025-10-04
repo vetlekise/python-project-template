@@ -11,13 +11,21 @@ A more detailed description of the project, its purpose, and what problems it so
 - **Automated Releases**: Draft releases gets created with [Release Drafter](https://github.com/release-drafter/release-drafter).
 
 ## Installation
-1. Clone the repository:
+Clone the repository:
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
 cd YOUR_REPOSITORY
 ```
 
-2. Install the package:
+Install the package:
 ```
 pip install .
 ```
+
+## Quick Usage
+Simple usage example
+```bash
+project_name
+```
+
+For more usage examples, see the [usage](usage/index.md) page.

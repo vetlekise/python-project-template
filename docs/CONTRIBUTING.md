@@ -15,27 +15,39 @@ To get your development environment set up, follow these steps.
 ### Fork and Clone the Repository
 First, fork the repository, then clone it to your local machine.
 
-### Create and Activate a Virtual Environment
+### Setup a Python Virtual Environment
 It's highly recommended to work in a virtual environment.
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
+python3 -m venv .venv
+source venv/bin/activate
 ```
+
+### Select Python Interpreter
+To enable features like code completion (IntelliSense), linting, and debugging, you must configure your editor to use the Python interpreter located in this project's virtual environment (`.venv`).
+
+This process is editor-specific, but the command is typically named `Python: Select Interpreter` or something similar. You should select the interpreter located in the `.venv` directory at the root of this project.
 
 ### Install Development Dependencies
 This command installs the project in "editable" mode (`-e`) along with all the tools needed for testing and development (`[dev]`).
 
 ```bash
-pip install -e ".[dev]"
+pip3 install -e ".[dev]"
 ```
 
-### Set Up Pre-commit Hooks
+### Setup and Use pre-commit Hooks
 This will install git hooks that automatically check your code for quality before you commit.
 
 ```bash
 pre-commit install
 ```
+
+Usage examples:
+- **Manually run on all files**: `pre-commit run --all-files`
+- **Skip hooks**: `git commit --no-verify -m "Your commit message"`
+
+### Documentation
+Read the `README.md` in [docs](README.md) for more information on how to setup and view the documentation.
 
 ## Issues
 Before starting work, search existing issues. If your contribution isn't covered, open a new issue. Describe the bug (with steps to reproduce) or proposed feature/enhancement.
