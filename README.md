@@ -17,8 +17,15 @@ git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
 cd YOUR_REPOSITORY
 ```
 
-Install the package:
+Create and activate a Python virtual environment:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+# windows: .venv\Scripts\activate
 ```
+
+Install the package with pip:
+```bash
 pip3 install .
 ```
 
@@ -28,4 +35,4 @@ Simple usage example
 project_name
 ```
 
-For more usage examples, see the [usage](usage/index.md) page.
+For more usage examples, see the [usage](docs/usage/index.md) page.

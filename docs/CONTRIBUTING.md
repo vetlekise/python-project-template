@@ -20,7 +20,7 @@ It's highly recommended to work in a virtual environment.
 
 ```bash
 python3 -m venv .venv
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
 ### Select Python Interpreter
@@ -47,7 +47,7 @@ Usage examples:
 - **Skip hooks**: `git commit --no-verify -m "Your commit message"`
 
 ### Documentation
-Read the `README.md` in [docs](README.md) for more information on how to setup and view the documentation.
+Read the [docs](/docs/documentation/index.md) page for more information on how to setup and view the documentation.
 
 ## Issues
 Before starting work, search existing issues. If your contribution isn't covered, open a new issue. Describe the bug (with steps to reproduce) or proposed feature/enhancement.
